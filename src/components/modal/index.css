@@ -1,0 +1,41 @@
+dialog {
+  display: var(--show, none);
+}
+
+dialog[open] {
+  --show: flex !important;
+  flex-direction: column;
+  animation: show 0.3s ease normal;
+}
+
+dialog.hide {
+  animation: hide 0.3s ease normal;
+}
+
+dialog::backdrop {
+  background: rgba(254, 152, 207, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  to {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

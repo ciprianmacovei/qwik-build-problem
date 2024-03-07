@@ -1,0 +1,7 @@
+[data-theme="dark"] .background-web3navbar {
+    background: #B3B3B3;
+}
+
+[data-theme="light"] .background-web3navbar {
+    background: white;
+}

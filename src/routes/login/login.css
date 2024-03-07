@@ -1,0 +1,15 @@
+[data-theme="dark"] .background {
+    background: black;
+}
+
+[data-theme="light"] .background {
+    background: white;
+}
+
+[data-theme="dark"] .card-background {
+    background: rgba(179, 179, 179, 0.3)
+}
+
+[data-theme="light"] .card-background {
+    background: #FFF5FA;
+}

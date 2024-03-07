@@ -1,0 +1,45 @@
+.switch-input {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch-label {
+    display: flex;
+    align-self: end;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 15px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 80px;
+    position: relative;
+}
+
+.switch-label:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid black;
+    transition: 0.5s;
+    box-shadow: 0 3px 0 0;
+}
+
+.switch-input:checked + .switch-label {
+    background: black;
+}
+
+.switch-input:checked + .switch-label:after {
+    left: calc(100% + 2px);
+    transform: translateX(-100%);
+}
+
+.switch-label:active:after {
+    width: 30px;
+}

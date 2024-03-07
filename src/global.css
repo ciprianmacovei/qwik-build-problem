@@ -1,0 +1,130 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+@import "node_modules/vanilla-cookieconsent/dist/cookieconsent.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "barrioregular";
+  src: url("@/fonts/barrio-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "pacifico";
+  src: url("@/fonts/Pacifico-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nunitoextralight";
+  src: url("@/fonts/nunito-variablefont_wght-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nunitoregular";
+  src: url("@/fonts/Nunito-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nunitobold";
+  src: url("@/fonts/Nunito-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0px 0px 5px white;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "pacifico", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body[data-theme="light"]  {
+  color: black !important;
+}
+
+body[data-theme="dark"] {
+  color: white !important;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.font-nuito {
+  font-family: "nunitobold", sans-serif;
+}
+
+.font-special {
+  font-family: "barrioregular", sans-serif;
+}
+
+svg.anonymous {
+  fill: #696666;
+}
+
+svg.anonymous-mask {
+  fill: gainsboro;
+}
+
+#search-icon-button:hover > svg#search-icon:hover {
+  stroke: black;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+button {
+  font-family: "nunitoextralight", sans-serif;
+}
+
+button[data-close-button] {
+  background: black !important;
+  border: none !important;
+}
+
+button[data-close-button] > svg {
+  stroke: white !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

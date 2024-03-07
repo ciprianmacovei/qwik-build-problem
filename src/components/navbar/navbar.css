@@ -1,0 +1,10 @@
+.user-panel {
+  padding: 24px;
+  background: gainsboro;
+  border: 2px solid black;
+  font-family: "Nunito", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
